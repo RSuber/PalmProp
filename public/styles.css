@@ -1,2 +1,43 @@
 body {
-  background-color: red; }
+  background-color: #eeece0 !important; }
+
+.navbar {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  font-family: "Pathway Gothic One";
+  font-size: 200%;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0%;
+  background-color: #aedfa7; }
+
+.col-lg-12 {
+  background-color: #5dbf4e; }
+
+.col-sm-5 {
+  color: #254c1f;
+  font-size: 206%;
+  padding-top: 139px; }
+
+.col-sm-2 {
+  font-size: 130%;
+  /*padding-left: 6.2%;*/
+  padding-top: 170px; }
+
+.col-sm-2 a {
+  color: #254c1f; }
+
+#slides_control > div {
+  height: 200px; }
+
+img {
+  margin: auto;
+  width: 400px; }
+
+#slides_control {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  top: 20px;
+  margin-left: -200px; }

@@ -1,6 +1,6 @@
-var gulp = require('gulp'); // npm install gulp
-var sass = require('gulp-sass'); // npm install gulp-sass
-var browserify = require('gulp-browserify') // npm install gulp-browserify
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserify = require('gulp-browserify')
 var htmlmin = require('gulp-htmlmin');
 var babel = require('gulp-babel')
 

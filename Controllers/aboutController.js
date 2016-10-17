@@ -1,5 +1,5 @@
-module.exports = function(app){
-  app.controller('AboutController,['$scope','$http',function($scope,$http){
-
-  }
-}
+module.exports = function(app) {
+    app.controller('aboutController', ['$scope', '$location',function($scope, $location) {
+console.log('faggot')
+    }]);
+};

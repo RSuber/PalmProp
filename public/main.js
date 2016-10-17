@@ -13,23 +13,44 @@
         s(r[o]);
     }return s;
 })({ 1: [function (require, module, exports) {
-        var app = angular.module('PalProp', ['ngRoute']);
-
+        module.exports = function (app) {
+            app.controller('aboutController', ['$scope', '$location', function ($scope, $location) {
+                console.log('faggot');
+            }]);
+        };
+    }, {}], 2: [function (require, module, exports) {
+        module.exports = function (app) {
+            app.controller('homeController', ['$scope', function ($scope) {
+                function CarouselDemoCtrl($scope) {
+                    $scope.myInterval = 3000;
+                    $scope.slides = [{
+                        image: 'http://lorempixel.com/400/200/'
+                    }, {
+                        image: 'http://lorempixel.com/400/200/food'
+                    }, {
+                        image: 'http://lorempixel.com/400/200/sports'
+                    }, {
+                        image: 'http://lorempixel.com/400/200/people'
+                    }];
+                }
+            }]);
+        };
+    }, {}], 3: [function (require, module, exports) {
+        var app = angular.module('PalProp', ['ngRoute', 'ui.bootstrap']);
+        require('./Controllers/aboutController')(app);
+        require('./Controllers/homeController')(app);
         app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/', {
-                redirectTo: '/login'
-            }).when('/login', {
-                controller: 'HomeController',
-                templateUrl: 'templates/login.html'
+                redirectTo: '/home'
             }).when('/home', {
-                controller: 'HomeController',
-                templateUrl: 'templates/home.html'
-            }).when('/available', {
-                controller: 'AvailableController',
-                templateUrl: 'templates/available.html'
-            }).when('/lookingfor', {
-                controller: 'LookingForController',
-                templateUrl: 'templates/lookingfor.html'
+                controller: 'homeController',
+                templateUrl: 'templates/homepage.html'
+            }).when('/about', {
+                controller: 'aboutController',
+                templateUrl: 'templates/about.html'
+            }).when('/contact', {
+                controller: 'aboutController',
+                templateUrl: 'templates/contact.html'
             });
         }]);
-    }, {}] }, {}, [1]);
+    }, { "./Controllers/aboutController": 1, "./Controllers/homeController": 2 }] }, {}, [3]);

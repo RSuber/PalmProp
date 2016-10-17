@@ -1,24 +1,21 @@
-let app = angular.module('PalProp', ['ngRoute']);
-
+let app = angular.module('PalProp', ['ngRoute','ui.bootstrap']);
+require('./Controllers/aboutController')(app);
+require('./Controllers/homeController')(app);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
-            redirectTo: '/login',
-        })
-        .when('/login', {
-            controller: 'HomeController',
-            templateUrl: 'templates/login.html',
+            redirectTo: '/home',
         })
         .when('/home', {
-            controller: 'HomeController',
-            templateUrl: 'templates/home.html',
+            controller: 'homeController',
+            templateUrl: 'templates/homepage.html',
         })
-        .when('/available', {
-            controller: 'AvailableController',
-            templateUrl: 'templates/available.html',
+        .when('/about', {
+            controller: 'aboutController',
+            templateUrl: 'templates/about.html',
         })
-        .when('/lookingfor', {
-            controller: 'LookingForController',
-            templateUrl: 'templates/lookingfor.html',
+        .when('/contact', {
+            controller: 'aboutController',
+            templateUrl: 'templates/contact.html',
         });
 }]);
