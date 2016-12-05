@@ -9,17 +9,17 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyCdRZc0JODGPlbVNc1ky1knYW0RG6lXzzA'></script>
    <script src="main.js"></script>
+   <script src="gmaps.js"></script>
   </head>
   <body>
     <nav class="navbar">
-  <div class= "col-sm-5">
-    Palm Properties Landscaping
-    </div>
-      <div class="col-sm-2"><a href="#home">Home</a></div>
-      <div class="col-sm-2"><a href="#contact">Contact</a></div>
-      <div class="col-sm-2"><a href="#about">About</a></div>
-      <div class="col-sm-1">Contact Us (843)441-0233 </div>
+      <div class="col-sm-2 home"><a href="#home">HOME</a></div>
+      <div class="col-sm-2 contact"><a href="#contact">CONTACT</a></div>
+      <div class="col-sm-4"><img src="images/Logo.png"></div>
+      <div class="col-sm-2"><a href="#about">ABOUT</a></div>
+      <div class="col-sm-2"><a href="#gallery">GALLERY</a></div>
   </nav>
     <main ng-view></main>
   </body>

@@ -1,21 +1,19 @@
-module.exports = function(app) {
-    app.controller('homeController', ['$scope',function($scope) {
-      function CarouselDemoCtrl($scope){
-        $scope.myInterval = 3000;
+ module.exports = function(app) {
+    app.controller('homeController', ['$scope', '$location',function($scope, $location) {
+      $scope.myInterval = 3000;
         $scope.slides = [
           {
-            image: 'http://lorempixel.com/400/200/'
+            image: '/Images/StockSnap_L9VZ6SOGBB.jpg'
           },
           {
-            image: 'http://lorempixel.com/400/200/food'
+            image: '/Images/StockSnap_Q5T8D3FB2E.jpg'
           },
           {
-            image: 'http://lorempixel.com/400/200/sports'
+            image: '/Images/StockSnap_QSZKSNAIYN.jpg'
           },
           {
-            image: 'http://lorempixel.com/400/200/people'
+            image: '/Images/StockSnap_T77502ZQ5U.jpg'
           }
         ];
-      }
     }]);
 };

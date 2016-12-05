@@ -17,5 +17,9 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/contact', {
             controller: 'aboutController',
             templateUrl: 'templates/contact.html',
-        });
+        })
+        .when('/gallery', {
+          controller:'homeController',
+          templateUrl:'templates/gallery.html',
+        })
 }]);
